@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link href='style.css' rel='stylesheet'>
+    <script src='script.js' defer></script>
+</head>
+<body>
+    <div class='dim'></div>
+    <h1>My Library</h1>
+    <div class='book-grid'>
+            <div class='book'>
+                <button data-new-book-btn class='new-book-btn'>+</button>
+            </div>
+            <div data-added-book class='book'>
+                <h2>Hyperion</h2>
+                <p>Dan Simmons</p>
+                <p>482 pages</p>
+                <div class='book-btns'>
+                    <button data-read id='read'>Read</button>
+                    <button data-delete id='delete'>Delete</button>
+                </div>
+            </div>
+            
+            <div data-input-form class='input-form'>
+                <form>
+                    <h2> New Book</h2>
+                    <label for='title'>Title:</label><br>
+                    <input type='text' id='title' name='title'><br>
+                    <label for='author'>Author:</label><br>
+                    <input type='text' id='author' name='author'><br>
+                    <label for='pages'>Pages:</label><br>
+                    <input type='number' id='pages' name='pages'><br><br>
+                    <input type='submit' value='submit'>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

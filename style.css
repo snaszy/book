@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to left, #11998e, #38ef7d);
+}
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.book-grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(10em, 1fr));
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    max-width: 100vw;
+    margin: 2em 3em;
+}
+.book {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .75);
+    width: 12em;
+    height: 15em;
+    border-radius: 1em;
+    line-height: .5em;
+    align-items: center;
+    justify-content: space-evenly;
+}
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+.new-book-btn {
+    border-radius: 1em;
+    align-self: center;
+    font-size: 2rem;
+    width: 1.5em;
+    height: 1.5em;
+}
+.book-btns > button{
+    border-radius: .5em;
+    width: 4em;
+    height: 2em;
+    margin: 0 .75em;
+}
+.input-form {
+    visibility: hidden;
+    display: block;
+    width: 18em;
+    height: 24em;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1em 3em;
+    line-height: 2em;
+    border-radius: 1em;
+}
