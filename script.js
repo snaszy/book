@@ -1,10 +1,4 @@
-let myLibrary = [
-    {
-        title: 'Hyperion',
-        author: 'Dan Simmons',
-        pages: 482
-    }
-];
+let myLibrary = [];
 
 function Book(title, author, pages) {
     this.title = title
@@ -12,14 +6,19 @@ function Book(title, author, pages) {
     this.pages = pages
 }
 
+function addBookToLibrary(title, author, pages) {
+    const newBook = new Book(title, author, pages)
+    myLibrary.push(newBook)
+    displayBook()
+}
+
 const library = document.querySelector('[data-library]')
 const newBookButton = document.querySelector('[data-new-book-btn]')
-const titleInput = document.querySelector('[data-title]')
-const authorInput = document.querySelector('[data-author]')
-const pagesInput = document.querySelector('[data-pages]')
 const inputForm = document.querySelector('[data-input-form]')
+const dimBackground = document.querySelector('[data-dim]')
+const submitButton = document.querySelector('[data-submit]')
 
-function addBookToLibrary() {
+function displayBook() {
     for (let i = 0; i < myLibrary.length; i++) {
         const book = document.createElement('div')
         book.classList.add('book')
@@ -52,8 +51,11 @@ function addBookToLibrary() {
         bookButtons.appendChild(deleteBook)
     }
 }
-addBookToLibrary()
+
 
 newBookButton.addEventListener('click', () => {
     inputForm.style.visibility = 'visible'
+    dimBackground.style.visibility = 'visible'
 })
+
+submitButton.addEventListener('click', addBookToLibrary())
