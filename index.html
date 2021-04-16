@@ -12,19 +12,23 @@
     <div data-dim class='dim'></div>
     <h1>My Library</h1>
     <div data-library class='library-grid'>
-            <div class='book'>
+            <div class='add-book'>
                 <button data-new-book-btn class='new-book-btn'>+</button>
             </div>  
             <div data-input-form class='input-form'>
-                <form>
+                <form id='form'>
                     <h2> New Book</h2>
                     <label for='title'>Title:</label><br>
-                    <input type='text' id='title' name='title'><br>
+                    <input data-title type='text' id='title' name='title' placeholder='Title'><br>
                     <label for='author'>Author:</label><br>
-                    <input type='text' id='author' name='author'><br>
+                    <input data-author type='text' id='author' name='author' placeholder='Author'><br>
                     <label for='pages'>Pages:</label><br>
-                    <input type='number' id='pages' name='pages'><br><br>
-                    <input data-submit type='submit' value='submit'>
+                    <input data-pages type='number' id='pages' name='pages' placeholder='Pages'><br>
+                    <label for='read'>Read:</label>
+                    <input data-read type='checkbox' id='read' name='read' value='yes'><br>
+                    <span data-error class='error'></span>
+                    <input data-submit class='add' type='button' form='form' value='Add'>
+                    <input data-cancel class='cancel' type='button' form='form' value='Cancel'>
                 </form>
             </div>
         </div>
